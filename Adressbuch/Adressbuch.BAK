@@ -1,0 +1,16 @@
+predicates 
+
+nondeterm adresse(symbol, symbol, integer, symbol, integer, integer)
+/* Adresse (Vorname, Nachname, Alter, Ort, PLZ, Tel)*/
+
+clauses
+adresse(harry, hirsch, 27, "Karlsruhe", 76131, 072144238).
+adresse(fabian, manz, 20, "Bermersbach", 76596, 072132568).
+adresse(merlin, hoferer, 20, "Forbach", 76596, 0722345687).
+adresse(leif, heckmann, 18, "Giessen", 35390, 0176463884).
+adresse(tim, voigtlaender, 18, "Gaggenau", 76571, 004931928).
+adresse(marco, mueller, 17, "Gaggenau", 76571, 07225779).
+adresse(rot, kaeppchen, 14, "Hinterer Wald", 77005, 065493820).
+
+goal
+adresse(Vorname,Nachname,Alter,Ort,PLZ,Tel) and PLZ>76000 and PLZ<77000.

@@ -1,0 +1,26 @@
+predicates
+
+versicherungsrabatt(string, integer)
+/*Versicherungsrabatt dann wenn Person x bekommt rabat R*/
+garage(string)
+/*x hat garagenrabatt*/
+garageR(string, integer)
+/*garagenrabatt*/
+unfallfreiR(string, integer)
+/*garagenrabatt*/
+alterR(string, integer)
+/*garagenrabatt*/
+
+clauses
+
+versicherungsrabatt (X,R) if garageR(X,R1) and alterR(X,R2) and unfallfreiR(X,R3) and R=R1+R2+R3.
+
+garageR(X,12) if garage(X).
+garageR(X,0) if not(garage(X)).
+
+
+garage("Otto").
+
+goal
+
+versicherungsrabatt("Otto")
